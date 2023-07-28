@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <pre>
+    Questão 1 :
+    a)SELECT pac.nome_paciente  ,ate.data_atendimento, ate.hr_atendimento ,ate.nome_unidade , ate.endereco_unidade ,ate.cd_especialidade
+    FROM atendimento AS ate LEFT JOIN pacientes AS pac ON ate.id_paciente AND pac.id_paciente
+    WHERE ate.cd_especialidade LIKE 'Neurologia' AND ate.data_atendimento BETWEEN SUBDATE(CURDATE(), INTERVAL 6 MONTH)  AND CURDATE();
+
+    b)SELECT pac.nome_paciente , pt.descricao_prontuario, ate.data_atendimento
+    FROM prontuario AS pt LEFT JOIN pacientes AS pac ON pt.id_paciente AND pac.id_paciente
+    LEFT JOIN atendimento AS ate ON pt.id_paciente AND ate.id_paciente
+    WHERE pt.id_paciente = 123
+
+    Questão 2: Verificaria com a equipe se o banco de dados ou servidores estão com algum problema de conexão ou de lentidão, faria o teste para verificar se realmente esta ocorrendo.
+
+    Questão 3: Faria o teste para tentar reproduzir o erro informado, faria o procedimento necessário para corrigir tanto no banco de dados ou no codigo.
+
+    Questão 4 :Tentaria identificar a causa do erro, para que seja corrigido.
+    </pre>
+</html>
