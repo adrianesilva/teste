@@ -3,7 +3,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     </head>
     <pre>
-    Questão 1 :
+    Questão 1:
     a)SELECT pac.nome_paciente  ,ate.data_atendimento, ate.hr_atendimento ,ate.nome_unidade , ate.endereco_unidade ,ate.cd_especialidade
     FROM atendimento AS ate LEFT JOIN pacientes AS pac ON ate.id_paciente AND pac.id_paciente
     WHERE ate.cd_especialidade LIKE 'Neurologia' AND ate.data_atendimento BETWEEN SUBDATE(CURDATE(), INTERVAL 6 MONTH)  AND CURDATE();
