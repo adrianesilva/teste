@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <label>Ano de Nascimento</label>
+        <input type="text" id="ano">
+        <button onclick="exibeResultado()">Resutado</button> 
+    </body>
+
+</html>
+<script>
+
+var ano = prompt('Digite o ano de nascimento');
+
+function exibeResultado(){
+
+    if ((ano % 4 == 0) && ((ano % 100 != 0) || (ano % 400 == 0))){
+        document.getElementById("ano").value = "O ano é bisexto";
+
+    }else{
+        document.getElementById("ano").value = "O ano não é bisexto";
+
+    }
+}
+
+</script>
