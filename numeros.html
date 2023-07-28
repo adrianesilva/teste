@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <label>Raiz do maior numero</label>
+        <input type="text" id="maior">
+        <label>Quadrado do menor numero</label>
+        <input type="text" id="menor">
+        <button onclick="exibeResultado()">Resutado</button> 
+    </body>
+
+</html>
+<script>
+
+var num1 = prompt('Digite um número');
+var num2 = prompt('Digite outro número');
+var maior = 0;
+var menor = 0;
+
+if(num1 > num2){
+    $maior = Math.sqrt(num1);
+    $menor = Math.pow(num2,2);
+
+}else{
+    $maior = Math.sqrt(num2);
+    $menor = Math.pow(num1,2);
+
+}
+
+function exibeResultado(){
+
+    document.getElementById("maior").value = $maior;
+    document.getElementById("menor").value = $menor;
+
+}
+
+</script>
